@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+  lemonldap:
+    container_name: lemonldap
+    image: coudot/lemonldap-ng:2.16.2
+    restart: always
+    ports:
+      - 80:80
+      - 9000:9000
+    environment:
+      SSODOMAIN: example.local
+      PORTAL_HOSTNAME: auth.example.local
+      MANAGER_HOSTNAME: manager.example.local
+      HANDLER_HOSTNAME: handler.example.local
+      TEST1_HOSTNAME: openproject.example.local
+
+volumes:
+  lemonldap:
+
