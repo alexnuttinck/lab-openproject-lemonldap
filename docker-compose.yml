@@ -1,15 +1,6 @@
 ---
 version: "3.7"
 
-networks:
-  frontend:
-  backend:
-
-volumes:
-  pgdata:
-  opdata:
-  lemonldap:
-
 x-op-restart-policy: &restart_policy
   restart: unless-stopped
 x-op-image: &image
@@ -136,3 +127,12 @@ services:
       MANAGER_HOSTNAME: manager.example.local
       HANDLER_HOSTNAME: handler.example.local
       TEST1_HOSTNAME: openproject.example.local
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  pgdata:
+  opdata:
+  lemonldap:

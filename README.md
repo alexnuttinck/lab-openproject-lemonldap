@@ -16,11 +16,10 @@ Update your `/etc/hosts` file with the following entries:
 ## Usage
 
 ```bash 
-docker-compose -f docker-compose-lemonldap.yml -f docker-compose-openproject.yml up -d
+docker compose -f docker-compose-lemonldap.yml -f docker-compose-openproject.yml up -d
 ```
 
 ## Configuration
-
 ### LemonLDAP
 
 The default login is `dwho` and the default password is `dwho`.
@@ -34,7 +33,6 @@ The default login is `admin` and the default password is `admin`.
 Go in Administration > Authentication > OpenID providers.
 
 Check the documentation: https://www.openproject.org/docs/installation-and-operations/misc/custom-openid-connect-providers/
-
 
 
 
